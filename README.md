@@ -37,7 +37,7 @@ define service{
     use                     generic-service
     host_name               pcmeasure.example.com
     service_description     temperature sensor
-    check_command           check_pcmeasure!28!30!com1.1!°C
+    check_command           check_pcmeasure!28!30!com1.1!celsius
 }
 ```
 ## Director:
