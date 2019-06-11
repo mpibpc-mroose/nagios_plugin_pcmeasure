@@ -41,8 +41,22 @@ define service{
 }
 ```
 ## Director:
-1. Icinga Director -> Commands -> Templates -> Add:
-![screenshot](https://s3.gifyu.com/images/Screenshot_20190611_125258.png)
-2. Icinga Director -> Commands -> Commands -> Add: 'pcmeasure_temperature'
-![screenshot](https://s3.gifyu.com/images/Screenshot_20190611_130728.png)
-![screenshot](https://s3.gifyu.com/images/Screenshot_20190611_130750.png)
+1. Icinga Director -> Define Data Fields:
+
+|Label|Field name|
+|-----|----------|
+|Critical|critical|
+|Warning|warning|
+|Etherbox address|etherbox_address|
+|Etherbox sensor label|etherbox_sensor_label|
+|Etherbox sensor name|etherbox_sensor_name|
+
+2. Icinga Director -> Commands -> Templates -> Add:
+![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command_template.png)
+3. Click on "Fields":
+![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command_template_fields.png)
+4. Icinga Director -> Commands -> Commands -> Add:
+![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command.png)
+5. Click on "Arguments"
+![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command_arguments.png)
+6. Create a service as usual ...
