@@ -1,2 +1,3 @@
 # TODO
-- correct format of perfdata
+- Create a release
+- Upload to NAGIOS and ICINGA exchange ...
