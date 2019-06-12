@@ -60,3 +60,5 @@ define service{
 5. Click on "Arguments"
 ![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command_arguments.png)
 6. Create a service as usual ...
+
+![screenshot](https://s3.gifyu.com/images/perfdata_icinga.png)
