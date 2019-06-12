@@ -23,15 +23,15 @@ OK: 27.8 celsius | celsius=27.8
 ```
 
 ## Config files:
-1. copy `check_pcmeasure.py' to your Nagios/Icinga plugin folder
-2. define a command:
+- copy `check_pcmeasure.py' to your Nagios/Icinga plugin folder
+- define a command:
 ```
 define command{
     command_name       check_pcmeasure
     command_line       $USER1$/check_pcmeasure.py -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$ -S $ARG3 -l $ARG4
 }
 ```
-3. define a service
+- define a service
 ```
 define service{
     use                     generic-service
@@ -41,7 +41,7 @@ define service{
 }
 ```
 ## Director:
-1. Icinga Director -> Define Data Fields:
+- Icinga Director -> Define Data Fields:
 
 |Label|Field name|
 |-----|----------|
@@ -50,15 +50,14 @@ define service{
 |Etherbox address|etherbox_address|
 |Etherbox sensor label|etherbox_sensor_label|
 |Etherbox sensor name|etherbox_sensor_name|
-
-2. Icinga Director -> Commands -> Templates -> Add:
+- Icinga Director -> Commands -> Templates -> Add:
 ![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command_template.png)
-3. Click on "Fields":
+- Click on "Fields":
 ![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command_template_fields.png)
-4. Icinga Director -> Commands -> Commands -> Add:
+- Icinga Director -> Commands -> Commands -> Add:
 ![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command.png)
-5. Click on "Arguments"
+- Click on "Arguments"
 ![screenshot](https://s3.gifyu.com/images/check_pcmeasure_command_arguments.png)
-6. Create a service as usual ...
-
+- Create a service as usual ...
+- Enjoy :)
 ![screenshot](https://s3.gifyu.com/images/perfdata_icinga.png)
